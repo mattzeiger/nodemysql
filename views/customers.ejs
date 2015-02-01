@@ -1,0 +1,43 @@
+<%- include layouts/header.ejs %>
+	<div class = "page-header">
+		<h1>Customers Listing: </h1>
+	</div>
+	<%
+		if (data.length) {
+			%>
+			<div class  = "row">
+				<div class = "col-md-6">
+					<table class = "table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Name</th>
+								<th>Address</th>
+								<th>Phone</th>
+								<th>E-mail</th>
+							</tr>
+						</thead>
+						<tbody>
+					<%
+					for(var i = 0;i < data.length;i++) {				
+						%>
+						<tr>
+							<td><%=(i+1)%></td>
+							<td><%=data[i].name%></td>
+							<td><%=data[i].address%></td>
+							<td><%=data[i].phone%></td>
+							<td><%=data[i].email%></td>
+						</tr>
+						<%
+					}
+					%>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<%
+		}
+	%>
+	</table>
+	<p><button type = "button" onClick = "window.location='/customers/add';">Create</button></p>
+<%- include layouts/footer.ejs %>	
