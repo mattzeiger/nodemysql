@@ -3,6 +3,20 @@
 		<h1>Customers Listing: </h1>
 	</div>
 	<%
+		if (status) {
+			%>
+			<div class = "alert alert-success" role = "alert">
+			<%
+			switch (status) {
+				case "created": 
+					%>Successfully created a customer.
+					<%
+					break;
+			}
+			%>			
+			</div>
+			<%
+		}
 		if (data.length) {
 			%>
 			<div class  = "row">
