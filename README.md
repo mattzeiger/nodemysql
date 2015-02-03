@@ -6,4 +6,3 @@ Libraries used:
 - Node
 - Express (express-myconnection, mysql)
 - Bootstrap
-- 
